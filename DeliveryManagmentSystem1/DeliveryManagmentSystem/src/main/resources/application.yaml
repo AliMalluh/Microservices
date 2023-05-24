@@ -1,0 +1,22 @@
+server:
+  port: 8081
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: 'jdbc:mysql://localhost:3306/mydb'
+    username: root
+    password: ali23
+  messages:
+    basename: messages
+    encoding: UTF-8
+  banner:
+    location: banner.txt
+  application:
+    name: delivery-service
+userapi:
+  services:
+    url: 'http://localhost:8081/user'
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
